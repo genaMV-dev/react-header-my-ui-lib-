@@ -1,0 +1,35 @@
+{
+  "name": "react-headerok",
+  "version": "1.0.0",
+  "description": "Customizable React header component",
+  "type": "module",
+
+  "main": "./dist/react-headerok.umd.js",
+  "module": "./dist/react-headerok.es.js",
+  "types": "./dist/index.d.ts",
+
+  "files": [
+    "dist"
+  ],
+
+  "keywords": [
+    "react",
+    "header",
+    "navbar",
+    "typescript"
+  ],
+
+  "license": "MIT",
+
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  }
+}
