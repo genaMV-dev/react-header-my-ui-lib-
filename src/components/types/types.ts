@@ -1,3 +1,5 @@
+import type { ReactNode } from "react"
+
 export interface HeaderStyleProps {
   fontColor?: string
   backgroundColor?: string
@@ -33,7 +35,7 @@ export interface HeaderProps extends HeaderStyleProps {
   links: HeaderLinkProps[]
   contacts?: HeaderContactProps[]
   maxLinks?: number
-  logo?: React.ReactNode
+  logo?: ReactNode
   logoStyle?: HeaderLogoStyle
   logoHref?: string
 }

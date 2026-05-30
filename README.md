@@ -1,41 +1,31 @@
 # react-headerok
 
-`react-headerok` - це невелика TypeScript/React бібліотека з готовим компонентом
-адаптивної шапки сайту: логотип, навігаційні посилання та контактні дані.
+`react-headerok` is a small React + TypeScript library that provides a customizable website header component with a logo, navigation links, and optional contact links.
 
-## Можливості
+## Features
 
-- Готовий компонент `Headerok` для React.
-- Налаштування кольорів, hover-станів, розмірів шрифтів і відступів через props.
-- Обмеження кількості пунктів меню через `maxLinks`.
-- Підтримка кастомного логотипа як `ReactNode`: текст, SVG, іконка або зображення.
-- Опціональні контакти з автоматичними `mailto:` і `tel:` посиланнями.
-- TypeScript типи для props.
+- Ready-to-use `Headerok` React component.
+- Custom navigation links and optional contact section.
+- Custom logo content: text, image, SVG, icon, or any React node.
+- Configurable colors, hover colors, font sizes, font weights, and spacing.
+- Optional uppercase navigation/contact text.
+- TypeScript types exported from the package.
 
-## Встановлення
+## Installation
 
 ```bash
 npm install react-headerok
 ```
 
-Бібліотека очікує, що у вашому проекті вже встановлені React і React DOM:
+React and React DOM are peer dependencies, so your app should already have them installed:
 
 ```bash
 npm install react react-dom
 ```
 
-Поточна версія пакета оголошує peer dependencies:
+## Usage
 
-```json
-{
-  "react": "^19.0.0",
-  "react-dom": "^19.0.0"
-}
-```
-
-## Швидкий старт
-
-Імпортуйте компонент і стилі бібліотеки:
+Import the component and the library stylesheet:
 
 ```tsx
 import { Headerok } from "react-headerok"
@@ -45,7 +35,7 @@ const links = [
   { id: 1, label: "Home", href: "/" },
   { id: 2, label: "About", href: "/about" },
   { id: 3, label: "Services", href: "/services" },
-  { id: 4, label: "Contacts", href: "/contacts" },
+  { id: 4, label: "Contact", href: "/contact" },
 ]
 
 const contacts = [
@@ -77,35 +67,27 @@ export function App() {
 }
 ```
 
-## API
+## Props
 
-### `Headerok`
-
-```tsx
-import { Headerok } from "react-headerok"
-```
-
-Компонент приймає об'єкт `HeaderProps`.
-
-| Prop | Тип | Обов'язковий | Опис |
+| Prop | Type | Required | Description |
 | --- | --- | --- | --- |
-| `links` | `HeaderLinkProps[]` | Так | Масив пунктів навігації. |
-| `contacts` | `HeaderContactProps[]` | Ні | Масив контактів, які показуються справа. |
-| `maxLinks` | `number` | Ні | Максимальна кількість пунктів меню. За замовчуванням показується до `5`. |
-| `logo` | `React.ReactNode` | Ні | Вміст логотипа: текст, SVG, іконка, зображення або JSX. |
-| `logoStyle` | `HeaderLogoStyle` | Ні | Окремі стилі для логотипа. |
-| `logoHref` | `string` | Ні | Посилання логотипа. Якщо не передати, використовується `href` першого пункту з `links`. |
-| `fontColor` | `string` | Ні | Колір навігаційних і контактних посилань. |
-| `backgroundColor` | `string` | Ні | Колір фону шапки. |
-| `gap` | `number` | Ні | Відстань між пунктами меню у пікселях. |
-| `fontSizeNav` | `number` | Ні | Розмір шрифту навігації у пікселях. |
-| `fontSizeContact` | `number` | Ні | Розмір шрифту контактів у пікселях. |
-| `fontWeightNav` | `number` | Ні | Товщина шрифту навігації. |
-| `fontWeightContact` | `number` | Ні | Товщина шрифту контактів. |
-| `isUpperCase` | `boolean` | Ні | Якщо `true`, текст посилань буде у верхньому регістрі. |
-| `hoverColor` | `string` | Ні | Колір посилань при наведенні. |
+| `links` | `HeaderLinkProps[]` | Yes | Navigation links rendered in the center of the header. |
+| `contacts` | `HeaderContactProps[]` | No | Contact items rendered on the right side of the header. |
+| `maxLinks` | `number` | No | Maximum number of navigation links to display. Defaults to `5`. |
+| `logo` | `ReactNode` | No | Logo content. Can be text, SVG, image, icon, or JSX. |
+| `logoStyle` | `HeaderLogoStyle` | No | Width, height, color, and hover color for the logo. |
+| `logoHref` | `string` | No | URL for the logo link. If omitted, the first link href is used. |
+| `fontColor` | `string` | No | Default color for navigation and contact links. |
+| `backgroundColor` | `string` | No | Header background color. |
+| `gap` | `number` | No | Gap between navigation links, in pixels. |
+| `fontSizeNav` | `number` | No | Navigation font size, in pixels. |
+| `fontSizeContact` | `number` | No | Contact font size, in pixels. |
+| `fontWeightNav` | `number` | No | Navigation font weight. |
+| `fontWeightContact` | `number` | No | Contact font weight. |
+| `isUpperCase` | `boolean` | No | Converts link text to uppercase when `true`. |
+| `hoverColor` | `string` | No | Hover color for navigation and contact links. |
 
-## Типи
+## Types
 
 ```ts
 export interface HeaderLinkProps {
@@ -149,7 +131,7 @@ export interface HeaderProps extends HeaderStyleProps {
 }
 ```
 
-Типи можна імпортувати з пакета:
+You can import the types directly from the package:
 
 ```ts
 import type {
@@ -161,7 +143,7 @@ import type {
 } from "react-headerok"
 ```
 
-## Приклад з SVG логотипом
+## SVG Logo Example
 
 ```tsx
 import { Headerok } from "react-headerok"
@@ -197,72 +179,11 @@ export function Header() {
 }
 ```
 
-## Поведінка компонента
+## Behavior Notes
 
-- `links` обрізається до `maxLinks`; якщо `maxLinks` не переданий, показується максимум `5` пунктів.
-- `contacts` може містити `email`, `phoneNumber` або обидва значення.
-- Для email автоматично створюється посилання `mailto:`.
-- Для телефону автоматично створюється посилання `tel:`.
-- `logoHref` має пріоритет над першим посиланням з `links`.
-- Якщо `logoStyle.color` або `logoStyle.hoverColor` не передані, логотип використовує загальні `fontColor` і `hoverColor`.
-
-## Розробка бібліотеки
-
-Встановити залежності:
-
-```bash
-npm install
-```
-
-Запустити Vite dev server:
-
-```bash
-npm run dev
-```
-
-Зібрати бібліотеку:
-
-```bash
-npm run build
-```
-
-Перевірити ESLint:
-
-```bash
-npm run lint
-```
-
-Після збірки файли бібліотеки знаходяться у `dist`:
-
-- `dist/react-headerok.es.js` - ES module build.
-- `dist/react-headerok.umd.js` - UMD build.
-- `dist/react-headerok.css` - стилі компонента.
-- `dist/index.d.ts` - TypeScript declarations entry.
-
-## Публікація
-
-Перед публікацією зберіть пакет:
-
-```bash
-npm run build
-```
-
-Перевірте вміст npm пакета:
-
-```bash
-npm pack --dry-run
-```
-
-Опублікуйте пакет:
-
-```bash
-npm publish
-```
-
-## Поточні зауваження для супроводу
-
-- README описує фактичний public API з `src/index.ts`.
-- Оскільки стилі збираються в окремий файл, у застосунку потрібно імпортувати
-  `react-headerok/dist/react-headerok.css`.
-- Варто перевірити declaration-файли перед публікацією: у поточній збірці
-  `dist/index.d.ts` порожній, хоча `package.json` вказує його як `types`.
+- `links` is limited by `maxLinks`; when `maxLinks` is not provided, up to `5` links are displayed.
+- `contacts` can include `email`, `phoneNumber`, or both.
+- Email contacts are rendered as `mailto:` links.
+- Phone contacts are rendered as `tel:` links.
+- `logoHref` has priority over the first link from `links`.
+- If `logoStyle.color` or `logoStyle.hoverColor` is not provided, the logo falls back to `fontColor` and `hoverColor`.
