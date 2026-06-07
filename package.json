@@ -1,31 +1,51 @@
 {
   "name": "react-headerok",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Customizable React header component",
   "type": "module",
-
   "main": "./dist/react-headerok.umd.js",
   "module": "./dist/react-headerok.es.js",
   "types": "./dist/index.d.ts",
-
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/react-headerok.es.js",
+      "require": "./dist/react-headerok.umd.js"
+    },
+    "./style.css": "./dist/react-headerok.css"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
   "files": [
     "dist"
   ],
-
   "keywords": [
     "react",
     "header",
     "navbar",
     "typescript"
   ],
-
   "license": "MIT",
-
   "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
-
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.12.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.59.2",
+    "vite": "^8.0.12",
+    "vite-plugin-dts": "^4.5.4"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

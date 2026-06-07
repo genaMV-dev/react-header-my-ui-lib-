@@ -5,7 +5,9 @@ import path from "path";
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      jsxRuntime: "classic",
+    }),
     dts({
       tsconfigPath: "./tsconfig.app.json",
       entryRoot: "src",

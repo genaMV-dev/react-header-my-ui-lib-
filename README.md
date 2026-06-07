@@ -29,7 +29,7 @@ Import the component and the library stylesheet:
 
 ```tsx
 import { Headerok } from "react-headerok"
-import "react-headerok/dist/react-headerok.css"
+import "react-headerok/style.css"
 
 const links = [
   { id: 1, label: "Home", href: "/" },
@@ -147,7 +147,7 @@ import type {
 
 ```tsx
 import { Headerok } from "react-headerok"
-import "react-headerok/dist/react-headerok.css"
+import "react-headerok/style.css"
 
 const Logo = (
   <svg viewBox="0 0 32 32" aria-label="Logo">
