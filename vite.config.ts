@@ -1,7 +1,7 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import dts from "vite-plugin-dts";
-import path from "path";
+import { defineConfig } from "vite"
+import react from "@vitejs/plugin-react"
+import dts from "vite-plugin-dts"
+import path from "path"
 
 export default defineConfig({
   plugins: [
@@ -19,9 +19,9 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
 
-      name: "ReactHeaderok",
+      name: "ReactHeadero4ok",
 
-      fileName: (format) => `react-headerok.${format}.js`,
+      fileName: (format) => `react-headero4ok.${format}.js`,
     },
 
     rollupOptions: {
@@ -35,4 +35,4 @@ export default defineConfig({
       },
     },
   },
-});
+})

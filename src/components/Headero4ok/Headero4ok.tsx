@@ -1,8 +1,8 @@
 import React from "react"
-import css from "./Headerok.module.css"
+import css from "./Headero4ok.module.css"
 import type { HeaderProps } from "../types/types"
 
-const Headerok = ({
+const Headero4ok = ({
   links,
   logo,
   logoStyle,
@@ -107,4 +107,4 @@ const Headerok = ({
   )
 }
 
-export default Headerok
+export default Headero4ok

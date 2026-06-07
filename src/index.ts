@@ -1,4 +1,4 @@
-export { default as Headerok } from "./components/Headerok/Headerok"
+export { default as Headero4ok } from "./components/Headero4ok/Headero4ok"
 
 export type {
   HeaderProps,

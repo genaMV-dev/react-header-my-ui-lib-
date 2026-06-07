@@ -1,10 +1,10 @@
-# react-headerok
+# react-headero4ok
 
-`react-headerok` is a small React + TypeScript library that provides a customizable website header component with a logo, navigation links, and optional contact links.
+`react-headero4ok` is a small React + TypeScript library that provides a customizable website header component with a logo, navigation links, and optional contact links.
 
 ## Features
 
-- Ready-to-use `Headerok` React component.
+- Ready-to-use `Headero4ok` React component.
 - Custom navigation links and optional contact section.
 - Custom logo content: text, image, SVG, icon, or any React node.
 - Configurable colors, hover colors, font sizes, font weights, and spacing.
@@ -14,7 +14,7 @@
 ## Installation
 
 ```bash
-npm install react-headerok
+npm install react-headero4ok
 ```
 
 React and React DOM are peer dependencies, so your app should already have them installed:
@@ -28,8 +28,8 @@ npm install react react-dom
 Import the component and the library stylesheet:
 
 ```tsx
-import { Headerok } from "react-headerok"
-import "react-headerok/style.css"
+import { Headero4ok } from "react-headero4ok"
+import "react-headero4ok/style.css"
 
 const links = [
   { id: 1, label: "Home", href: "/" },
@@ -48,8 +48,8 @@ const contacts = [
 
 export function App() {
   return (
-    <Headerok
-      logo="Headerok"
+    <Headero4ok
+      logo="Headero4ok"
       logoHref="/"
       links={links}
       contacts={contacts}
@@ -69,23 +69,23 @@ export function App() {
 
 ## Props
 
-| Prop | Type | Required | Description |
-| --- | --- | --- | --- |
-| `links` | `HeaderLinkProps[]` | Yes | Navigation links rendered in the center of the header. |
-| `contacts` | `HeaderContactProps[]` | No | Contact items rendered on the right side of the header. |
-| `maxLinks` | `number` | No | Maximum number of navigation links to display. Defaults to `5`. |
-| `logo` | `ReactNode` | No | Logo content. Can be text, SVG, image, icon, or JSX. |
-| `logoStyle` | `HeaderLogoStyle` | No | Width, height, color, and hover color for the logo. |
-| `logoHref` | `string` | No | URL for the logo link. If omitted, the first link href is used. |
-| `fontColor` | `string` | No | Default color for navigation and contact links. |
-| `backgroundColor` | `string` | No | Header background color. |
-| `gap` | `number` | No | Gap between navigation links, in pixels. |
-| `fontSizeNav` | `number` | No | Navigation font size, in pixels. |
-| `fontSizeContact` | `number` | No | Contact font size, in pixels. |
-| `fontWeightNav` | `number` | No | Navigation font weight. |
-| `fontWeightContact` | `number` | No | Contact font weight. |
-| `isUpperCase` | `boolean` | No | Converts link text to uppercase when `true`. |
-| `hoverColor` | `string` | No | Hover color for navigation and contact links. |
+| Prop                | Type                   | Required | Description                                                     |
+| ------------------- | ---------------------- | -------- | --------------------------------------------------------------- |
+| `links`             | `HeaderLinkProps[]`    | Yes      | Navigation links rendered in the center of the header.          |
+| `contacts`          | `HeaderContactProps[]` | No       | Contact items rendered on the right side of the header.         |
+| `maxLinks`          | `number`               | No       | Maximum number of navigation links to display. Defaults to `5`. |
+| `logo`              | `ReactNode`            | No       | Logo content. Can be text, SVG, image, icon, or JSX.            |
+| `logoStyle`         | `HeaderLogoStyle`      | No       | Width, height, color, and hover color for the logo.             |
+| `logoHref`          | `string`               | No       | URL for the logo link. If omitted, the first link href is used. |
+| `fontColor`         | `string`               | No       | Default color for navigation and contact links.                 |
+| `backgroundColor`   | `string`               | No       | Header background color.                                        |
+| `gap`               | `number`               | No       | Gap between navigation links, in pixels.                        |
+| `fontSizeNav`       | `number`               | No       | Navigation font size, in pixels.                                |
+| `fontSizeContact`   | `number`               | No       | Contact font size, in pixels.                                   |
+| `fontWeightNav`     | `number`               | No       | Navigation font weight.                                         |
+| `fontWeightContact` | `number`               | No       | Contact font weight.                                            |
+| `isUpperCase`       | `boolean`              | No       | Converts link text to uppercase when `true`.                    |
+| `hoverColor`        | `string`               | No       | Hover color for navigation and contact links.                   |
 
 ## Types
 
@@ -140,14 +140,14 @@ import type {
   HeaderContactProps,
   HeaderLogoStyle,
   HeaderStyleProps,
-} from "react-headerok"
+} from "react-headero4ok"
 ```
 
 ## SVG Logo Example
 
 ```tsx
-import { Headerok } from "react-headerok"
-import "react-headerok/style.css"
+import { Headero4ok } from "react-headero4ok"
+import "react-headero4ok/style.css"
 
 const Logo = (
   <svg viewBox="0 0 32 32" aria-label="Logo">
@@ -157,7 +157,7 @@ const Logo = (
 
 export function Header() {
   return (
-    <Headerok
+    <Headero4ok
       logo={Logo}
       logoHref="/"
       logoStyle={{

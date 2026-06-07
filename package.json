@@ -1,18 +1,18 @@
 {
-  "name": "react-headerok",
+  "name": "react-headero4ok",
   "version": "1.0.1",
   "description": "Customizable React header component",
   "type": "module",
-  "main": "./dist/react-headerok.umd.js",
-  "module": "./dist/react-headerok.es.js",
+  "main": "./dist/react-headero4ok.umd.js",
+  "module": "./dist/react-headero4ok.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/react-headerok.es.js",
-      "require": "./dist/react-headerok.umd.js"
+      "import": "./dist/react-headero4ok.es.js",
+      "require": "./dist/react-headero4ok.umd.js"
     },
-    "./style.css": "./dist/react-headerok.css"
+    "./style.css": "./dist/react-headero4ok.css"
   },
   "sideEffects": [
     "*.css"
